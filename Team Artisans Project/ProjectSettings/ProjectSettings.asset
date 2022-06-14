@@ -533,7 +533,21 @@ PlayerSettings:
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    Android: UNITY_MP_TOOLS_NET_STATS_MONITOR_ENABLED_IN_RELEASE
+    CloudRendering: UNITY_MP_TOOLS_NET_STATS_MONITOR_ENABLED_IN_RELEASE
+    EmbeddedLinux: UNITY_MP_TOOLS_NET_STATS_MONITOR_ENABLED_IN_RELEASE
+    Nintendo Switch: UNITY_MP_TOOLS_NET_STATS_MONITOR_ENABLED_IN_RELEASE
+    PS4: UNITY_MP_TOOLS_NET_STATS_MONITOR_ENABLED_IN_RELEASE
+    PS5: UNITY_MP_TOOLS_NET_STATS_MONITOR_ENABLED_IN_RELEASE
+    Server: UNITY_MP_TOOLS_NET_STATS_MONITOR_ENABLED_IN_RELEASE
+    Stadia: UNITY_MP_TOOLS_NET_STATS_MONITOR_ENABLED_IN_RELEASE
+    Standalone: UNITY_MP_TOOLS_NET_STATS_MONITOR_ENABLED_IN_RELEASE
+    WebGL: UNITY_MP_TOOLS_NET_STATS_MONITOR_ENABLED_IN_RELEASE
+    Windows Store Apps: UNITY_MP_TOOLS_NET_STATS_MONITOR_ENABLED_IN_RELEASE
+    XboxOne: UNITY_MP_TOOLS_NET_STATS_MONITOR_ENABLED_IN_RELEASE
+    iPhone: UNITY_MP_TOOLS_NET_STATS_MONITOR_ENABLED_IN_RELEASE
+    tvOS: UNITY_MP_TOOLS_NET_STATS_MONITOR_ENABLED_IN_RELEASE
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
@@ -607,7 +621,14 @@ PlayerSettings:
   XboxOneOverrideIdentityName: 
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    Build: 0
+    Collab: 0
+    Game Performance: 0
+    Legacy Analytics: 0
+    Purchasing: 0
+    UDP: 0
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -621,11 +642,11 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 0
-  cloudProjectId: 
+  cloudProjectId: ffe8cd41-326a-4acb-bd11-c08857fd7e3b
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: Team Artisans Project
+  organizationId: darbyscott1997
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 
