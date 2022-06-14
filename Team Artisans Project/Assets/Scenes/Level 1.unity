@@ -666,26 +666,14 @@ GameObject:
   - component: {fileID: 1406892041}
   - component: {fileID: 1406892040}
   - component: {fileID: 1406892039}
-  - component: {fileID: 1406892038}
+  - component: {fileID: 1406892042}
   m_Layer: 0
   m_Name: milkcartonA
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1406892038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1406892037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54ee64706f6badc49ab793c761907270, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &1406892039
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -769,6 +757,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1406892042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406892037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10634e48535d18f4091aa58d79a42ff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemType: carton
 --- !u!1 &1984079608
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,6 +802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c46379d209cad294e807a5d6436e04c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  items: []
   movementJoystick: {fileID: 288099005}
   playerSpeed: 100
 --- !u!50 &1984079610
