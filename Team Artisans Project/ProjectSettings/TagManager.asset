@@ -39,6 +39,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: bacground
+    uniqueID: 2767540717
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
