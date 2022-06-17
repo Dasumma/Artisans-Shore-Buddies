@@ -5,5 +5,6 @@ using UnityEngine;
 public class collectableScript : MonoBehaviour
 {
     public string itemType;
-
+    public int value;
+    public int weight;
 }

@@ -7,16 +7,28 @@ using TMPro;
 public class PlayerMovement : MonoBehaviour
 
 {
-    public List<string> items;
-    public int score;
+    private struct itemInfo
+    {
+        public string name;
+        public int value;
+        public int weight;
+    }
+
+    private List<itemInfo> itemList;
+    public int weightLimit;
+    private int score;
+    private int curWeight;
     public MovementJoystick movementJoystick;
     public TextMeshProUGUI playerScore;
+    public TextMeshProUGUI playerWeight;
     public float playerSpeed;
     private Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
     {
+        UpdateWeightText(0);
+        itemList = new List<itemInfo>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -33,35 +45,44 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    //Item Collection and Other 2D collision triggers
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Collectable"))
+        if (collision.CompareTag("Collectable") )
         {
-            string itemType = collision.gameObject.GetComponent<collectableScript>().itemType;
-            print("Item Collected: " + itemType);
-
-            //Each Objects Score Value
-            switch (itemType)
+            GameObject item = collision.gameObject;
+            itemInfo itemStats = new itemInfo();
+            itemStats.name = item.GetComponent<collectableScript>().itemType;
+            itemStats.value = item.GetComponent<collectableScript>().value;
+            itemStats.weight = item.GetComponent<collectableScript>().weight;
+            if(itemStats.weight + curWeight <= weightLimit)
             {
-                case ("carton"):
-                    score += 10;
-                    break;
-                case ("battery"):
-                    score += 20;
-                    break;
-                case ("can"):
-                    score += 10;
-                    break;
-                case ("ring"):
-                    score += 5;
-                    break;
-                case ("flipflop"):
-                    score += 10;
-                    break;
+                curWeight += itemStats.weight;
+                print("Item Collected: " + itemStats.name);
+                UpdateWeightText(curWeight);
+                itemList.Add(itemStats);
+                Destroy(item);
             }
-            playerScore.text = "Score: " + score.ToString();
-            items.Add(itemType);
-            Destroy(collision.gameObject);
+            else
+            {
+                print(itemStats.name + " is too heavy!: " + itemStats.weight.ToString() + "lb");
+            }
+        }   else if (collision.CompareTag("RecyclingBin"))
+        {
+            print("Depositing Current Trash");
+            for(int i = itemList.Count - 1; i >= 0; i--)
+            {
+                score += itemList[i].value;
+                itemList.RemoveAt(i);
+                playerScore.text = "Score: " + score.ToString();
+            }
+            curWeight = 0;
+            UpdateWeightText(0);
         }
+    }
+
+    private void UpdateWeightText(int curWeight)
+    {
+        playerWeight.text = "Weight: " + curWeight.ToString() + "/" + weightLimit.ToString();
     }
 }
