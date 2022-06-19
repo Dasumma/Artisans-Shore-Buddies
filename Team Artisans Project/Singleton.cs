@@ -8,7 +8,8 @@ public class Singleton : MonoBehaviour
         {
             if(_instance == null)
             {
-                _instance = new GameObject().AddComponent<Singleton>();
+                GameObject obj = newGameObject
+                _instance = obj.AddComponent<Singleton>();
             
             }
             return _instance;
