@@ -1,3 +1,6 @@
+using UnityEngine;
+
+
 public class Singleton : MonoBehaviour
 {
     private static Singleton _instance;
@@ -8,7 +11,7 @@ public class Singleton : MonoBehaviour
         {
             if(_instance == null)
             {
-                GameObject obj = newGameObject
+                GameObject obj = newGameObject;
                 _instance = obj.AddComponent<Singleton>();
             
             }
