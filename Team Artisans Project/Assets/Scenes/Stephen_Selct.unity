@@ -627,8 +627,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.0003891}
-  m_SizeDelta: {x: 800, y: 356.78}
+  m_AnchoredPosition: {x: 0, y: -0.00021362}
+  m_SizeDelta: {x: 800, y: 452.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1314040465
 MonoBehaviour:
@@ -817,7 +817,6 @@ GameObject:
   - component: {fileID: 1735233276}
   - component: {fileID: 1735233275}
   - component: {fileID: 1735233274}
-  - component: {fileID: 1735233273}
   - component: {fileID: 1735233272}
   m_Layer: 5
   m_Name: Back
@@ -857,18 +856,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 856a0332c63b8e2469df3856e85b6496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1735233273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1735233270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97184fa88c631554f96263bbf86c437a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1735233274
@@ -977,7 +964,6 @@ GameObject:
   - component: {fileID: 2073245518}
   - component: {fileID: 2073245517}
   - component: {fileID: 2073245516}
-  - component: {fileID: 2073245515}
   - component: {fileID: 2073245514}
   m_Layer: 5
   m_Name: Select
@@ -1017,18 +1003,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 856a0332c63b8e2469df3856e85b6496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2073245515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2073245512}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97184fa88c631554f96263bbf86c437a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &2073245516
