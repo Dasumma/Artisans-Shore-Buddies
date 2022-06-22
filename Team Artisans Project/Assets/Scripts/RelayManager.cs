@@ -45,20 +45,28 @@ public class RelayManager : Singleton <RelayManager>
     [SerializeField]
     private int maxConnections = 5;
 
-    public bool IsRelayEnabled => Transport != null&&
+    public bool IsRelayEnabled => Transport != null &&
         Transport.Protocol == UnityTransport.ProtocolType.RelayUnityTransport;
+
     public UnityTransport Transport =>NetworkManager.Singleton.gameObject.GetComponent<UnityTransport>();
+
 
     public async Task<RelayHostData> SetupRelay()
     {
+
         InitializationOptions options = new InitializationOptions()
             .SetEnvironmentName(environment);
-            await UnityServices.InitializeAsync(options);
+
+        await UnityServices.InitializeAsync(options);
+
+
         if(!AuthenticationService.Instance.IsSignedIn)
         {
             await AuthenticationService.Instance.SignInAnonymouslyAsync();
         }
+
         Allocation allocation = await Relay.Instance.CreateAllocationAsync(maxConnections);
+
         RelayHostData relayHostData = new RelayHostData
         {
             Key = allocation.Key,
@@ -69,10 +77,14 @@ public class RelayManager : Singleton <RelayManager>
             ConnectionData = allocation.ConnectionData
 
         };
+
         relayHostData.JoinCode = await Relay.Instance.GetJoinCodeAsync(relayHostData.AllocationID);
+
         Transport.SetRelayServerData(relayHostData.IPv4Address, relayHostData.Port,relayHostData.AllocationIDBytes,
-        relayHostData.Key,relayHostData.ConnectionData);
+            relayHostData.Key,relayHostData.ConnectionData);
+
         Logger.Instance.LogInfo($"Relay Server generate a join code{relayHostData.JoinCode}");
+
         return relayHostData;
     }
         public async Task<RelayJoinData> JoinRelay(string joinCode)

@@ -35,5 +35,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/tilemap scene.unity
     guid: 22244690cac0eec4bbcbae764a15b7eb
+  - enabled: 1
+    path: Assets/Scenes/TEst.unity
+    guid: bdc9b1b66ed33664eb9db6dba77bea9a
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 48995f73df87bc9498c9649a42bda54d, type: 2}

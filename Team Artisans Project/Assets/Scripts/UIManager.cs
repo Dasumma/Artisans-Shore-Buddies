@@ -8,10 +8,13 @@ public class UIManager : MonoBehaviour
 {
 	[SerializeField]
 	private Button startServerButton;
+
 	[SerializeField]
 	private Button startHostButton;
+
 	[SerializeField]
 	private Button startClientButton;
+
 	[SerializeField]
 	private TMP_InputField joinCodeInput;
 
@@ -29,8 +32,10 @@ public class UIManager : MonoBehaviour
 			
 			if (RelayManager.Instance.IsRelayEnabled)
 				await RelayManager.Instance.SetupRelay();
+
 			if (NetworkManager.Singleton.StartHost())
 				Logger.Instance.LogInfo("Host started...");
+
 			else
 				Logger.Instance.LogInfo("Unable to start host...");
 			SceneManager.LoadScene("Level 1");
