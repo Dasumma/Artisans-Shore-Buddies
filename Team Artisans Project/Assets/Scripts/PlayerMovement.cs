@@ -31,6 +31,13 @@ public class PlayerMovement : MonoBehaviour
         itemList = new List<itemInfo>();
         rb = GetComponent<Rigidbody2D>();
     }
+	
+	void Awake()
+	{
+		/*movementJoystick = GameObject.Find("MovementJoystick").GetComponent<MovementJoystick>();
+		playerScore = GameObject.Find("PlayerScore").GetComponent<TextMeshProUGUI>();
+		playerWeight = GameObject.Find("PlayerWeight").GetComponent<TextMeshProUGUI>();*/
+	}
 
     // Update is called once per frame
     void FixedUpdate()

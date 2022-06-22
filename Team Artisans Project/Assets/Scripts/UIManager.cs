@@ -7,48 +7,34 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
 	[SerializeField]
-	private Button startServerButton;
-
-	[SerializeField]
-	private Button startHostButton;
-
-	[SerializeField]
-	private Button startClientButton;
-
-	[SerializeField]
 	private TMP_InputField joinCodeInput;
 
 	private bool hasServerStarted;
 	
-	private void Awake()
+	public void ButtonPress()
 	{
-		
+		//SceneManager.LoadScene("Level 1");
+		StartHostButton();
 	}
-	
-	void start()
+
+	public async void StartHostButton()
 	{
-		startHostButton?.onClick.AddListener(async () =>
-		{
-			
-			if (RelayManager.Instance.IsRelayEnabled)
-				await RelayManager.Instance.SetupRelay();
+		if (RelayManager.Instance.IsRelayEnabled)
+			await RelayManager.Instance.SetupRelay();
 
-			if (NetworkManager.Singleton.StartHost())
-				Logger.Instance.LogInfo("Host started...");
+		if (NetworkManager.Singleton.StartHost())
+			Logger.Instance.LogInfo("Host started...");
 
-			else
-				Logger.Instance.LogInfo("Unable to start host...");
-			SceneManager.LoadScene("Level 1");
-		});
-		
-		startClientButton?.onClick.AddListener(async () =>
-		{
-			if (RelayManager.Instance.IsRelayEnabled && !string.IsNullOrEmpty(joinCodeInput.text))
-				await RelayManager.Instance.JoinRelay(joinCodeInput.text);
-			if (NetworkManager.Singleton.StartHost())
-				Logger.Instance.LogInfo("Client started...");
-			else
-				Logger.Instance.LogInfo("Unable to start client...");
-		});
+		else
+			Logger.Instance.LogInfo("Unable to start host...");
+	}
+	public async void StartClientButton()
+	{
+		if (RelayManager.Instance.IsRelayEnabled && !string.IsNullOrEmpty(joinCodeInput.text))
+			await RelayManager.Instance.JoinRelay(joinCodeInput.text);
+		if (NetworkManager.Singleton.StartClient())
+			Logger.Instance.LogInfo("Client started...");
+		else
+			Logger.Instance.LogInfo("Unable to start client...");
 	}
 }

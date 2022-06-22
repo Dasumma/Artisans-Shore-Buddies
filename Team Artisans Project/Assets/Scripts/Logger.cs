@@ -14,8 +14,12 @@ public class Logger : Singleton<Logger>
     [SerializeField]
     private int maxLines = 15;
 
+	void Start()
+	{
+	}
     void Awake()
     {
+		debugAreaText = GameObject.Find("Logger").GetComponent<TextMeshProUGUI>();
         if (debugAreaText == null)
         {
             debugAreaText = GetComponent<TextMeshProUGUI>();
