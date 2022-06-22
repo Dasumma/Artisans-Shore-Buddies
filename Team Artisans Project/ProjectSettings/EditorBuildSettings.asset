@@ -5,34 +5,34 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Start Screen.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Menu.unity
     guid: f4a51236cab0f264d911bde269f0ffe0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level 1.unity
     guid: f46e0013ed8793f46ba0deacba34ae1f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Character Select.unity
     guid: 76bf9a54a0c992e49b9d176b6e396cc2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Sammy_Select.unity
     guid: 5a4301a0cc495b74593941eb435b29cb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Emma Select.unity
     guid: 4ec597a7cca9a9442bfa5c7652789a52
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Shelly Select.unity
     guid: c6d330481c4228946908f635c680bcec
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Finn_Select.unity
     guid: a60e52d7f5018ae4397b94b43d89bcdd
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Stephen_Selct.unity
     guid: 41d55cff5a1368c4698e9983bccd3481
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/tilemap scene.unity
     guid: 22244690cac0eec4bbcbae764a15b7eb
   - enabled: 1
