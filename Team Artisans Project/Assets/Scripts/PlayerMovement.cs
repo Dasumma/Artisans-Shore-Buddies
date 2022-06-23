@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-<<<<<<< Updated upstream
-=======
 using Photon.Pun;
->>>>>>> Stashed changes
+
 
 public class PlayerMovement : MonoBehaviour
 

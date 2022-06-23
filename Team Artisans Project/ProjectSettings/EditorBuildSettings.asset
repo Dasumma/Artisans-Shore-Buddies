@@ -6,43 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Start Screen.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
-    path: Assets/Scenes/Menu.unity
-    guid: f4a51236cab0f264d911bde269f0ffe0
-  - enabled: 1
-    path: Assets/Scenes/Level 1.unity
-    guid: f46e0013ed8793f46ba0deacba34ae1f
-<<<<<<< Updated upstream
-=======
-  - enabled: 0
-    path: Assets/Scenes/Character Select.unity
-    guid: 76bf9a54a0c992e49b9d176b6e396cc2
-  - enabled: 0
-    path: Assets/Scenes/Sammy_Select.unity
-    guid: 5a4301a0cc495b74593941eb435b29cb
-  - enabled: 0
-    path: Assets/Scenes/Emma Select.unity
-    guid: 4ec597a7cca9a9442bfa5c7652789a52
-  - enabled: 0
-    path: Assets/Scenes/Shelly Select.unity
-    guid: c6d330481c4228946908f635c680bcec
-  - enabled: 0
-    path: Assets/Scenes/Finn_Select.unity
-    guid: a60e52d7f5018ae4397b94b43d89bcdd
+    path: Assets/Scenes/Start.unity
+    guid: edc76650f402a4f4fa7d0cba423f5e54
   - enabled: 1
     path: Assets/Scenes/Lobby.unity
     guid: 87aa8ccb449691b4dbc5eb0e635fdc1b
-  - enabled: 0
-    path: Assets/Scenes/Stephen_Selct.unity
-    guid: 41d55cff5a1368c4698e9983bccd3481
-  - enabled: 0
-    path: Assets/Scenes/tilemap scene.unity
-    guid: 22244690cac0eec4bbcbae764a15b7eb
   - enabled: 1
     path: Assets/Scenes/TEst.unity
     guid: bdc9b1b66ed33664eb9db6dba77bea9a
->>>>>>> Stashed changes
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 48995f73df87bc9498c9649a42bda54d, type: 2}
