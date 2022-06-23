@@ -485,7 +485,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 388.95636
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -509,8 +509,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 423804708}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 703, y: 373, z: -10}
-  m_LocalScale: {x: 1, y: 1.8375, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -966,7 +966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc5f9af8ae143dc42877dbfc472127ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joinCodeInput: {fileID: 1671990716}
+  joinCodeInput: {fileID: 0}
 --- !u!1 &1139490127
 GameObject:
   m_ObjectHideFlags: 0
@@ -1301,10 +1301,10 @@ MonoBehaviour:
   NetworkConfig:
     ProtocolVersion: 0
     NetworkTransport: {fileID: 1340115641}
-    PlayerPrefab: {fileID: 7154889158308562505, guid: c75069aa0cf192d4383455d953b8e5dd, type: 3}
+    PlayerPrefab: {fileID: 6445220658883718483, guid: df6c8369f53672d47bc41c69d1aab03a, type: 3}
     NetworkPrefabs:
     - Override: 0
-      Prefab: {fileID: 7154889158308562505, guid: c75069aa0cf192d4383455d953b8e5dd, type: 3}
+      Prefab: {fileID: 6445220658883718483, guid: df6c8369f53672d47bc41c69d1aab03a, type: 3}
       SourcePrefabToOverride: {fileID: 0}
       SourceHashToOverride: 0
       OverridingTargetPrefab: {fileID: 0}
