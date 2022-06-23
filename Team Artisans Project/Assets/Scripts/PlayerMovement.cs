@@ -6,7 +6,7 @@ using TMPro;
 using Photon.Pun;
 
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviourPun
 
 {
     public List<string> items;
@@ -16,19 +16,16 @@ public class PlayerMovement : MonoBehaviour
     public float playerSpeed;
     private Rigidbody2D rb;
 
-    PhotonView view;
-
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        view = GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (view.IsMine)
+        if (photonView.IsMine)
         {
             
             if (movementJoystick.joystickVec.y != 0)
