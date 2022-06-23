@@ -126,7 +126,51 @@ Tilemap:
   m_GameObject: {fileID: 7053867439561422921}
   m_Enabled: 1
   m_Tiles:
+<<<<<<< HEAD:Team Artisans Project/Assets/palletes/New Palette.prefab
+  - first: {x: -9, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 5
+      m_TileSpriteIndex: 5
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -8, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -7, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -6, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 2
+      m_TileSpriteIndex: 2
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -5, y: 0, z: 0}
+=======
   - first: {x: -6, y: -1, z: 0}
+>>>>>>> parent of 0562523 (tile map + fixed sleection):Team Artisans Project/Assets/palletes/shore pallete.prefab
     second:
       serializedVersion: 2
       m_TileIndex: 1
@@ -164,6 +208,12 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 92e7ddcdff16da548a70ce24c8ce8b1c, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: d79fe90fce6ae7548815f444c54f79b4, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: da02742d2e087644fa45a2e586a44959, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 16a37c9780add7a429d611ba331a9012, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 678820e001ffaa14e83b98de195a74bd, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: cbb0ff2c5bdc29a4e8ae064d0d0ddb3e, type: 3}
@@ -171,8 +221,14 @@ Tilemap:
     m_Data: {fileID: 21300000, guid: 1c8c03b0dba0a4a4b886df0dab66a504, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 0df5bd24ae91c6841a319705f6bceb17, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: cc9deb674ad6e644aae9be5d2810427e, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 20f00dca134cdd443818f2d44d79c42f, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: d066d6d6b863be04298215e4ddd7bfca, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 3
+  - m_RefCount: 6
     m_Data:
       e00: 1
       e01: 0
@@ -191,13 +247,18 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 3
+  - m_RefCount: 6
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+<<<<<<< HEAD:Team Artisans Project/Assets/palletes/New Palette.prefab
+  m_Origin: {x: -9, y: 0, z: 0}
+  m_Size: {x: 9, y: 1, z: 1}
+=======
   m_Origin: {x: -6, y: -1, z: 0}
   m_Size: {x: 6, y: 1, z: 1}
+>>>>>>> parent of 0562523 (tile map + fixed sleection):Team Artisans Project/Assets/palletes/shore pallete.prefab
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -266,7 +327,11 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
+<<<<<<< HEAD:Team Artisans Project/Assets/palletes/New Palette.prefab
+--- !u!114 &6649953988090752396
+=======
 --- !u!114 &2273982944276317915
+>>>>>>> parent of 0562523 (tile map + fixed sleection):Team Artisans Project/Assets/palletes/shore pallete.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

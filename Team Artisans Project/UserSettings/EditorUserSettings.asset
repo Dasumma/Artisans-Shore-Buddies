@@ -5,6 +5,8 @@ EditorUserSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 4
   m_ConfigSettings:
+<<<<<<< HEAD
+=======
     RecentlyUsedSceneGuid-0:
       value: 540756005c545c0f0c5e0f7b49715a444f15412e7d7f70327b2c4e6ab4e3376a
       flags: 0
@@ -35,6 +37,7 @@ EditorUserSettings:
     RecentlyUsedSceneGuid-9:
       value: 0505020355055808080a5475497059444015197a282d27332f284e67e3e5653e
       flags: 0
+>>>>>>> parent of 0562523 (tile map + fixed sleection)
     vcSharedLogLevel:
       value: 0d5e400f0650
       flags: 0
