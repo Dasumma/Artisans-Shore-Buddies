@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.Netcode;
 
 public class PlayerMovement : MonoBehaviour
 
@@ -38,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
 		playerScore = GameObject.Find("PlayerScore").GetComponent<TextMeshProUGUI>();
 		playerWeight = GameObject.Find("PlayerWeight").GetComponent<TextMeshProUGUI>();*/
 	}
+ 
 
     // Update is called once per frame
     void FixedUpdate()
