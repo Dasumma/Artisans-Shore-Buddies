@@ -27,6 +27,8 @@ public class UIManager : MonoBehaviour
 
 		else
 			Logger.Instance.LogInfo("Unable to start host...");
+		
+		GameObject.Find("Sammy(Clone)").name = "Player";
 	}
 	public async void StartClientButton()
 	{
@@ -36,5 +38,6 @@ public class UIManager : MonoBehaviour
 			Logger.Instance.LogInfo("Client started...");
 		else
 			Logger.Instance.LogInfo("Unable to start client...");
+		GameObject.Find("Sammy(Clone)").name = "Client";
 	}
 }

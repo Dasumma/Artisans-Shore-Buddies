@@ -35,9 +35,7 @@ public class PlayerMovement : MonoBehaviour
 	
 	void Awake()
 	{
-		/*movementJoystick = GameObject.Find("MovementJoystick").GetComponent<MovementJoystick>();
-		playerScore = GameObject.Find("PlayerScore").GetComponent<TextMeshProUGUI>();
-		playerWeight = GameObject.Find("PlayerWeight").GetComponent<TextMeshProUGUI>();*/
+		movementJoystick = GameObject.Find("Movement Joystick").GetComponent<MovementJoystick>();
 	}
  
 
