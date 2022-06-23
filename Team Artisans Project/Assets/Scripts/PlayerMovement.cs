@@ -11,10 +11,11 @@ public class PlayerMovement : MonoBehaviourPun
 {
     public List<string> items;
     public int score;
-    public MovementJoystick movementJoystick;
     public TextMeshProUGUI playerScore;
     public float playerSpeed;
     private Rigidbody2D rb;
+    Vector3 mousePosition;
+    Vector2 position = new Vector2(0f, 0f);
 
     // Start is called before the first frame update
     void Start()
@@ -27,17 +28,16 @@ public class PlayerMovement : MonoBehaviourPun
     {
         if (photonView.IsMine)
         {
-            
-            if (movementJoystick.joystickVec.y != 0)
-            {
-                rb.velocity = new Vector2(movementJoystick.joystickVec.x * playerSpeed, movementJoystick.joystickVec.y * playerSpeed);
-            }
-            else
-            {
-                rb.velocity = Vector2.zero;
-            }
-           
+
+            mousePosition = Input.mousePosition;
+            mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+            position = Vector2.Lerp(transform.position, mousePosition, playerSpeed);
+
         }
+    }
+    private void FixedUpdate()
+    {
+        rb.MovePosition(position);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
