@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+<<<<<<< Updated upstream
+=======
+using Photon.Pun;
+>>>>>>> Stashed changes
 
 public class PlayerMovement : MonoBehaviour
 
@@ -14,22 +18,30 @@ public class PlayerMovement : MonoBehaviour
     public float playerSpeed;
     private Rigidbody2D rb;
 
+    PhotonView view;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        view = GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        if (movementJoystick.joystickVec.y != 0)
+        if (view.IsMine)
         {
-            rb.velocity = new Vector2(movementJoystick.joystickVec.x * playerSpeed, movementJoystick.joystickVec.y * playerSpeed);
-        }
-        else
-        {
-            rb.velocity = Vector2.zero;
+            
+            if (movementJoystick.joystickVec.y != 0)
+            {
+                rb.velocity = new Vector2(movementJoystick.joystickVec.x * playerSpeed, movementJoystick.joystickVec.y * playerSpeed);
+            }
+            else
+            {
+                rb.velocity = Vector2.zero;
+            }
+           
         }
     }
 
