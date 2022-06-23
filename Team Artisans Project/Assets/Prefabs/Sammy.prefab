@@ -841,4 +841,4 @@ MonoBehaviour:
   movementJoystick: {fileID: 6549245127223573675}
   playerScore: {fileID: 1008255140127870810}
   playerWeight: {fileID: 1008255140748319810}
-  playerSpeed: 100
+  playerSpeed: 200

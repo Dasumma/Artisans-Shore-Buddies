@@ -11,12 +11,6 @@ public class UIManager : MonoBehaviour
 
 	private bool hasServerStarted;
 	
-	public void ButtonPress()
-	{
-		//SceneManager.LoadScene("Level 1");
-		StartHostButton();
-	}
-
 	public async void StartHostButton()
 	{
 		if (RelayManager.Instance.IsRelayEnabled)
