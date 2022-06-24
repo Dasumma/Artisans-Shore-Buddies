@@ -28,11 +28,10 @@ public class PlayerMovement : MonoBehaviourPun
     {
         if (photonView.IsMine)
         {
-
             mousePosition = Input.mousePosition;
             mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
             position = Vector2.Lerp(transform.position, mousePosition, playerSpeed);
-
+			Camera.main.transform.position = new Vector3(position.x, position.y, -10);
         }
     }
     private void FixedUpdate()
