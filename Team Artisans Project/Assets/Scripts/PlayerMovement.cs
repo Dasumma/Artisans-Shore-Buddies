@@ -31,7 +31,11 @@ public class PlayerMovement : MonoBehaviourPun
             mousePosition = Input.mousePosition;
             mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
             position = Vector2.Lerp(transform.position, mousePosition, playerSpeed);
-			Camera.main.transform.position = new Vector3(position.x, position.y, -10);
+			if(position.x > -2080 && position.x < 2567)
+				Camera.main.transform.position = new Vector3(position.x, Camera.main.transform.position.y, -10);
+			if(position.y > 175 && position.y < 593)
+				Camera.main.transform.position = new Vector3(Camera.main.transform.position.x, position.y, -10);
+			
         }
     }
     private void FixedUpdate()
