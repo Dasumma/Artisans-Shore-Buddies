@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class ConnectToServer : MonoBehaviourPunCallbacks
 {
+	public Animator transition;
     // Start is called before the first frame update
     private void Start()
     {
@@ -17,9 +18,16 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
     {
         PhotonNetwork.JoinLobby();
     }
+	
+	IEnumerator LoadLevel()
+	{
+        transition.SetTrigger("Start");
+		yield return new WaitForSeconds(1);
+        PhotonNetwork.LoadLevel("Lobby");
+	}
+	
     public override void OnJoinedLobby()
     {
-        
-        SceneManager.LoadScene("Lobby");
+        StartCoroutine(LoadLevel());
     }
 }
