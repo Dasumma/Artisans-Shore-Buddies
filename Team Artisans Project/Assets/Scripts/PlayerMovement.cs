@@ -22,6 +22,9 @@ public class PlayerMovement : MonoBehaviourPun
     public TextMeshProUGUI playerScore;
     public TextMeshProUGUI playerWeight;
     public float playerSpeed;
+	public float speedDebuff;
+	
+	private float actualSpeed;
     private Rigidbody2D rb;
     Vector3 mousePosition;
     Vector2 position = new Vector2(0f, 0f);
@@ -45,7 +48,7 @@ public class PlayerMovement : MonoBehaviourPun
         {
             mousePosition = Input.mousePosition;
             mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-            position = Vector2.Lerp(transform.position, mousePosition, playerSpeed);
+            position = Vector2.Lerp(transform.position, mousePosition, actualSpeed);
 			if(position.x > -2080 && position.x < 2567)
 				Camera.main.transform.position = new Vector3(position.x, Camera.main.transform.position.y, -10);
 			if(position.y > 175 && position.y < 593)
@@ -93,5 +96,13 @@ public class PlayerMovement : MonoBehaviourPun
 			curWeight = 0;
 			playerWeight.text = "Weight: " + curWeight.ToString() + "/" + weightLimit.ToString();
         }
+		else if (collision.CompareTag("Beach"))
+		{
+			actualSpeed = playerSpeed * speedDebuff; 
+		}
+		else if (collision.CompareTag("Water"))
+		{
+			actualSpeed = playerSpeed;
+		}
     }
 }

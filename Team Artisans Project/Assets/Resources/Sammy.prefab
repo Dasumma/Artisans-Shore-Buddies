@@ -202,6 +202,7 @@ MonoBehaviour:
   playerScore: {fileID: 0}
   playerWeight: {fileID: 0}
   playerSpeed: 0.025
+  speedDebuff: 0.5
 --- !u!114 &-2397683204162019234
 MonoBehaviour:
   m_ObjectHideFlags: 0
