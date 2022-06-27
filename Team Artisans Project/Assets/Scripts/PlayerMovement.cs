@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviourPun
 	public int curWeight;
 	public int weightLimit;
     public TextMeshProUGUI playerScore;
-    public TextMeshProUGUI playerWeight;
+	public GameObject weightBar;
     public float playerSpeed;
 	public float speedDebuff;
 	
@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviourPun
 		if(photonView.IsMine)
 		{
 			playerScore = GameObject.Find("Score").GetComponent<TextMeshProUGUI>();
-			playerWeight = GameObject.Find("Weight").GetComponent<TextMeshProUGUI>();
+			weightBar = GameObject.Find("Bar");
 		}
 		itemList = new List<itemInfo>();
         rb = GetComponent<Rigidbody2D>();
@@ -75,7 +75,7 @@ public class PlayerMovement : MonoBehaviourPun
 			{
 				curWeight += itemStats.weight;
 				print("Item Colected: " + itemStats.name);
-				playerWeight.text = "Weight: " + curWeight.ToString() + "/" + weightLimit.ToString();
+				weightBar.GetComponent<Image>().fillAmount = 0;
 				itemList.Add(itemStats);
 				collision.gameObject.GetComponent<collectableScript>().CallToDelete();
 			} 
@@ -94,7 +94,6 @@ public class PlayerMovement : MonoBehaviourPun
 				playerScore.text = "Score: " + score.ToString();
 			}
 			curWeight = 0;
-			playerWeight.text = "Weight: " + curWeight.ToString() + "/" + weightLimit.ToString();
         }
 		else if (collision.CompareTag("Beach"))
 		{
@@ -104,5 +103,6 @@ public class PlayerMovement : MonoBehaviourPun
 		{
 			actualSpeed = playerSpeed;
 		}
+		weightBar.GetComponent<Image>().fillAmount = (float)curWeight/(float)weightLimit;
     }
 }
