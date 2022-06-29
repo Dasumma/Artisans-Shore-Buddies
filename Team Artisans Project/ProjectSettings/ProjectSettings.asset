@@ -834,11 +834,11 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 0
-  cloudProjectId: 7cc3ed8c-e22b-4ac6-90cb-85c7d22d2317
+  cloudProjectId: ffe8cd41-326a-4acb-bd11-c08857fd7e3b
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Team Artisans Project (1)
-  organizationId: unity_10adc857520dbb964d1c
+  projectName: Team Artisans Project
+  organizationId: darbyscott1997
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 
