@@ -215,11 +215,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefabs:
-  - {fileID: 1646548566485805265, guid: aa58a3f3f10323c4f90bbecc7188797c, type: 3}
-  - {fileID: 1646548566485805265, guid: 35400593680be4a438da6a3e2f1cbe69, type: 3}
-  - {fileID: 1646548566485805265, guid: 258b04155c0b94c429a69228adc06e48, type: 3}
-  - {fileID: 1646548566485805265, guid: e3e830c3bc07b4b47b5c1e11b5e3ff0f, type: 3}
-  - {fileID: 1646548566485805265, guid: 47500fc259aac054a8190f28c418931b, type: 3}
+  - {fileID: 7084435507911036632, guid: e14a72cbe56f8a64e9c52afc330e66e6, type: 3}
+  - {fileID: 5338215564465397346, guid: 4731b5d66d32f4b478096d09d9680c13, type: 3}
+  - {fileID: 7091325341488867091, guid: 348cfed3e73c878458641f1bc1033176, type: 3}
+  - {fileID: 6043944884181962061, guid: f55dbd3d0c1071949a5e5e28431d784c, type: 3}
+  - {fileID: 1651159241701393514, guid: 6beb745b15b6c344c94c48de252368d9, type: 3}
   spawnPoints:
   - {fileID: 628875936}
   - {fileID: 120865729}

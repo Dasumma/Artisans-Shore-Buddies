@@ -50,7 +50,7 @@ public class PlayerMovement : MonoBehaviourPun
             mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
             position = Vector2.Lerp(transform.position, mousePosition, actualSpeed); 
 			var dir = mousePosition - transform.position;
-			var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg + 90;
+			var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90;
 			transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 			
 			transform.rotation *= Quaternion.Euler(0f, 0f, 90f);

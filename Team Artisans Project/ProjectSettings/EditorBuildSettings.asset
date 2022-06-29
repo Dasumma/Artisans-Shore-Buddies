@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Start.unity
-    guid: edc76650f402a4f4fa7d0cba423f5e54
   - enabled: 1
     path: Assets/Scenes/ConnectToServer.unity
     guid: 729ce27659603d249affdef416d352bc
@@ -15,10 +12,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Lobby.unity
     guid: 87aa8ccb449691b4dbc5eb0e635fdc1b
   - enabled: 1
+    path: Assets/Scenes/Character Select.unity
+    guid: ea2e05b5159bcd04baa4ed6f8ab27d53
+  - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: bdc9b1b66ed33664eb9db6dba77bea9a
-  - enabled: 0
-    path: Assets/Scenes/Test.unity
-    guid: 058ccd74dcab3a8489e7b1283bee9ae9
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 48995f73df87bc9498c9649a42bda54d, type: 2}
