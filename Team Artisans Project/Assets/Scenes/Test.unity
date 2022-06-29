@@ -428,6 +428,8 @@ MonoBehaviour:
   lobbyPanel: {fileID: 0}
   roomPanel: {fileID: 1331961359}
   roomName: {fileID: 0}
+  roomItemPrefab: {fileID: 0}
+  contentObject: {fileID: 0}
   playerItemsList:
   - {fileID: 0}
   - {fileID: 0}
@@ -479,6 +481,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1086078480}
     m_Modifications:
+    - target: {fileID: 2421075852854824862, guid: 41010146823dad64f82335e739230a89, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -107
+      objectReference: {fileID: 0}
+    - target: {fileID: 2421075852854824862, guid: 41010146823dad64f82335e739230a89, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 59
+      objectReference: {fileID: 0}
     - target: {fileID: 7245786738100684261, guid: 41010146823dad64f82335e739230a89, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

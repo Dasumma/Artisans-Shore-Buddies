@@ -18,6 +18,8 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     public List<PlayerItem> playerItemsList = new List<PlayerItem>();
     public PlayerItem playerItemPrefab;
     public Transform playerItemParent;
+
+
     private void Start()
     {
         PhotonNetwork.JoinLobby();
@@ -65,8 +67,8 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     }
     public override void OnLeftRoom()
     {
-        roomPanel.SetActive(false);
-        lobbyPanel.SetActive(true);
+        roomPanel.SetActive(true);
+        lobbyPanel.SetActive(false);
     }
     
     

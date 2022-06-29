@@ -32,11 +32,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4240581257068565740}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -376.6, y: 72.600006}
+  m_AnchoredPosition: {x: -117.7, y: 68.1}
   m_SizeDelta: {x: 33.6553, y: 26.88038}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4405828969842952426
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3899147993422254932}
         m_TargetAssemblyTypeName: PlayerItem, Assembly-CSharp
         m_MethodName: OnClickLeftArrow
         m_Mode: 1
@@ -165,7 +165,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4240581257068565740}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -254,7 +254,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3899147993422254932}
         m_TargetAssemblyTypeName: PlayerItem, Assembly-CSharp
         m_MethodName: OnClickRightArrow
         m_Mode: 1
@@ -297,7 +297,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4240581257068565740}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -332,7 +332,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e41a6955aa6162a438ef1b288d11bb16, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -372,9 +372,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8062172368882600670}
-  - {fileID: 754660673100161424}
   - {fileID: 5136150165209465239}
   - {fileID: 4978543635865648777}
+  - {fileID: 754660673100161424}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -392,10 +392,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerName: {fileID: 436440722652436451}
   highlightColor: {r: 0, g: 0, b: 0, a: 0}
-  leftArrowButton: {fileID: 0}
-  rightArrowButton: {fileID: 0}
-  playerAvatar: {fileID: 0}
-  avatars: []
+  leftArrowButton: {fileID: 27559233974064457}
+  rightArrowButton: {fileID: 2651298452463409136}
+  playerAvatar: {fileID: 5626954059272804299}
+  avatars:
+  - {fileID: 21300000, guid: e41a6955aa6162a438ef1b288d11bb16, type: 3}
+  - {fileID: 21300000, guid: 64a4e3b9ed81ad04da5748d8a2a17d7f, type: 3}
+  - {fileID: 21300000, guid: 837e97bcc2ef03d4ebc634027d8591c6, type: 3}
+  - {fileID: 21300000, guid: b988a5a0846c6b140a3f178c90278eeb, type: 3}
+  - {fileID: 21300000, guid: 4b868f431921e524d93e77c41724e7ea, type: 3}
 --- !u!1 &7502405943397444274
 GameObject:
   m_ObjectHideFlags: 0

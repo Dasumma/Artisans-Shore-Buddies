@@ -9,13 +9,14 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
 {
     public InputField usernameInput;
     public Text buttonText;
+
+
     public void OnClickConnect()
     {
         if(usernameInput.text.Length >= 1)
         {
             PhotonNetwork.NickName = usernameInput.text;
             buttonText.text = "Connecting...";
-            PhotonNetwork.AutomaticallySyncScene = true;
             PhotonNetwork.ConnectUsingSettings();
         }
     }
@@ -26,8 +27,8 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
     // Update is called once per frame
     public override void OnConnectedToMaster()
     {
-        SceneManager.LoadScene("Lobby");
-        PhotonNetwork.JoinLobby();
+        PhotonNetwork.LoadLevel("Lobby");
+
     }
 	
 	IEnumerator LoadLevel()
