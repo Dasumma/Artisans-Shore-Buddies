@@ -15,16 +15,13 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
         {
             PhotonNetwork.NickName = usernameInput.text;
             buttonText.text = "Connecting...";
+            PhotonNetwork.AutomaticallySyncScene = true;
             PhotonNetwork.ConnectUsingSettings();
         }
     }
 
 	public Animator transition;
     // Start is called before the first frame update
-    private void Start()
-    {
-        PhotonNetwork.ConnectUsingSettings();
-    }
 
     // Update is called once per frame
     public override void OnConnectedToMaster()
@@ -40,8 +37,8 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
         PhotonNetwork.LoadLevel("Lobby");
 	}
 	
-    public override void OnJoinedLobby()
+    /*public override void OnJoinedLobby()
     {
         StartCoroutine(LoadLevel());
-    }
+    }*/
 }
