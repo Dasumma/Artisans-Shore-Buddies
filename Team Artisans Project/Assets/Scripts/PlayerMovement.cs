@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviourPun
 			transform.rotation *= Quaternion.Euler(0f, 0f, 90f);
 			if(position.x > -2080 && position.x < 2567)
 				Camera.main.transform.position = new Vector3(position.x, Camera.main.transform.position.y, -10);
-			if(position.y > 175 && position.y < 593)
+			if(position.y > -70 && position.y < 346)
 				Camera.main.transform.position = new Vector3(Camera.main.transform.position.x, position.y, -10);
 			
         }
