@@ -24,6 +24,25 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     public PlayerItem playerItemPrefab;
     public Transform playerItemParent;
 
+    public GameObject playButton;
+
+    private void Update()
+    {
+        if (PhotonNetwork.IsMasterClient && PhotonNetwork.CurrentRoom.PlayerCount >=2)
+        {
+            playButton.SetActive(true);
+        }
+        else
+        {
+            playButton.SetActive(false);
+        }
+    }
+
+    public void OnClickPlayButton()
+    {
+        PhotonNetwork.LoadLevel("Level1");
+
+    }
 
     private void Start()
     {
@@ -112,6 +131,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     
     public void OnPlayerEnteredRoom(PlayerItem newPlayer)
     {
+        print("new player");
         UpdatePlayerList();
     }
     public override void OnPlayerLeftRoom(Player otherPlayer)

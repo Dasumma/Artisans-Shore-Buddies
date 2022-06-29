@@ -5,8 +5,8 @@ using Photon.Pun;
 
 public class SpawnPlayer : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public List<GameObject> playerPrefab;
+	// Start is called before the first frame update
+	public GameObject[] playerPrefabs;
 	public List<GameObject> trashItems;
 	public int trashQuantity;
 	public int playerChoice;
@@ -16,8 +16,9 @@ public class SpawnPlayer : MonoBehaviour
     private void Start()
     {
         Vector2 randomPosition = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
-        PhotonNetwork.Instantiate(playerPrefab[playerChoice].name, randomPosition, Quaternion.identity);
-		if(PhotonNetwork.IsMasterClient)
+		GameObject playerToSpawn = playerPrefabs[(int)PhotonNetwork.LocalPlayer.CustomProperties["playerAvatars"]];
+		PhotonNetwork.Instantiate(playerToSpawn.name, randomPosition, Quaternion.identity);
+		if (PhotonNetwork.IsMasterClient)
 		{
 			for(int i = 0; i < trashQuantity; i++)
 			{
