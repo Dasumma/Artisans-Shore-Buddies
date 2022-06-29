@@ -17,14 +17,15 @@ public class PlayerItem : MonoBehaviourPunCallbacks
     public  Sprite[] avatars;
 
     Player player;
-    private void Awake()
+    private void Start()
     {
        backgroundImage = GetComponent<Image>();
+       playerProperties["playerAvatar"] = 1;
         
     }
     public void SetPlayerInfo(Player _player)
     {
-        //playerName.text = _player.NickName;
+        playerName.text = _player.NickName;
         player = _player;
         UpdatePlayerItem(player);
     }
@@ -57,9 +58,9 @@ public class PlayerItem : MonoBehaviourPunCallbacks
             playerProperties["playerAvatar"] = (int)playerProperties["playerAvatar"]+1;
         }
         PhotonNetwork.SetPlayerCustomProperties(playerProperties);
-        print("button clicked");
+        print(playerProperties["playerAvatar"]);
     }
-    public override void OnPlayerPropertiesUpdate(Player targetPlayer,ExitGames.Client.Photon.Hashtable playerProperties)
+    public override void OnPlayerPropertiesUpdate(Player targetPlayer, ExitGames.Client.Photon.Hashtable changedProps)
     {
         if(player == targetPlayer)
         {

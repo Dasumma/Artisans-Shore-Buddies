@@ -19,6 +19,6 @@ public class RoomItem : MonoBehaviour
     }
     public void OnClickItem()
     {
-        manager.OnJoinedRoom(roomName.text);
+        manager.JoinRoom(roomName.text);
     }
 }

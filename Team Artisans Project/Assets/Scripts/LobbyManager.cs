@@ -31,30 +31,10 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     }
      public override void OnJoinedRoom()
     {
-        lobbyPanel.SetActive(true);
+        lobbyPanel.SetActive(false);
         roomPanel.SetActive(true);
         roomName.text = "room Name:" + PhotonNetwork.CurrentRoom.Name;
         UpdatePlayerList();
-    }
-    
-    void UpdatePlayerList()
-    {
-        foreach(PlayerItem item in playerItemsList)
-        {
-            Destroy(item.gameObject);
-        }
-        playerItemsList.Clear();
-
-        if(PhotonNetwork.CurrentRoom == null)
-        {
-            return;
-        }
-        foreach(KeyValuePair<int, Player> player in PhotonNetwork.CurrentRoom.Players)
-        {
-            PlayerItem newPlayerItem =Instantiate (playerItemPrefab,playerItemParent);
-            playerItemsList.Add(newPlayerItem);
-            
-        }
     }
     public override void OnRoomListUpdate(List<RoomInfo> roomList)
     {
@@ -73,6 +53,41 @@ public class LobbyManager : MonoBehaviourPunCallbacks
            RoomItem newRoom = Instantiate(roomItemPrefab,contentObject);
            newRoom.SetRoomName(room.Name);
            roomItemsList.Add(newRoom);
+        }
+    }
+    public void JoinRoom(string roomName)
+    {
+        PhotonNetwork.JoinRoom(roomName);
+    }
+    public void OnClickLeaveRoom()
+    {
+        PhotonNetwork.LeaveRoom();
+    }
+    public override void OnLeftRoom()
+    {
+        roomPanel.SetActive(false);
+        lobbyPanel.SetActive(true);
+    }
+    
+    
+    void UpdatePlayerList()
+    {
+        foreach(PlayerItem item in playerItemsList)
+        {
+            Destroy(item.gameObject);
+        }
+        playerItemsList.Clear();
+
+        if(PhotonNetwork.CurrentRoom == null)
+        {
+            return;
+        }
+        foreach(KeyValuePair<int, Player> player in PhotonNetwork.CurrentRoom.Players)
+        {
+            PlayerItem newPlayerItem =Instantiate (playerItemPrefab,playerItemParent);
+            newPlayerItem.SetPlayerInfo(player.Value);
+            playerItemsList.Add(newPlayerItem);
+            
         }
     }
     
