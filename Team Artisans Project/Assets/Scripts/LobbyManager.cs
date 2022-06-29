@@ -11,6 +11,8 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     public GameObject lobbyPanel;
     public GameObject roomPanel;
     public Text roomName;
+
+    //room stuff
     public RoomItem roomItemPrefab;
     List<RoomItem> roomItemsList = new List<RoomItem>();
     public Transform contentObject;
