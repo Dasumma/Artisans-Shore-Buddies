@@ -78,6 +78,7 @@ public class PlayerMovement : MonoBehaviourPun
 			
 			if(itemStats.weight + curWeight <= weightLimit)
 			{
+				GetComponent<AudioSource>().Play(0);
 				curWeight += itemStats.weight;
 				print("Item Colected: " + itemStats.name);
 				weightBar.GetComponent<Image>().fillAmount = 0;
