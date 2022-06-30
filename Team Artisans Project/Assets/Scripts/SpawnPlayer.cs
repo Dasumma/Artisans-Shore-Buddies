@@ -23,7 +23,7 @@ public class SpawnPlayer : MonoBehaviour
 			for(int i = 0; i < trashQuantity; i++)
 			{
 				randomPosition = new Vector2(Random.Range(borderMinX, borderMaxX), Random.Range(borderMinY, borderMaxY));
-				PhotonNetwork.Instantiate(trashItems[Random.Range(0, 5)].name, randomPosition, Quaternion.identity);
+				PhotonNetwork.Instantiate(trashItems[Random.Range(0,6)].name, randomPosition, Quaternion.identity);
 			}
 		}
     }
