@@ -8,6 +8,9 @@ TagManager:
   - RecyclingBin
   - Beach
   - Water
+  - OceanOnly
+  - Debuffs
+  - NoDebuffs
   layers:
   - Default
   - TransparentFX

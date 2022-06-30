@@ -100,14 +100,23 @@ public class PlayerMovement : MonoBehaviourPun
 			}
 			curWeight = 0;
         }
-		else if (collision.CompareTag("Beach"))
-		{
-			actualSpeed = playerSpeed * speedDebuff; 
-		}
 		else if (collision.CompareTag("Water"))
 		{
 			actualSpeed = playerSpeed;
 		}
 		weightBar.GetComponent<Image>().fillAmount = (float)curWeight/(float)weightLimit;
     }
+	
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		if (collision.gameObject.tag == "Beach" && tag != "OceanOnly" && photonView.IsMine)
+		{
+			Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+			actualSpeed = playerSpeed * speedDebuff;
+		}
+		if (tag == "NoDebuffs" && photonView.IsMine)
+		{
+			Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+		}
+	}
 }

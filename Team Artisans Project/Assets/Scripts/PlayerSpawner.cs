@@ -27,8 +27,7 @@ public class PlayerSpawner : MonoBehaviour
             for (int i = 0; i < trashQuantity; i++)
             {
                 Vector2 randomPosition = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
-                randomPosition = new Vector2(Random.Range(borderMinX, borderMaxX), Random.Range(borderMinY, borderMaxY));
-                PhotonNetwork.Instantiate(trashItems[Random.Range(0, 5)].name, randomPosition, Quaternion.identity);
+                PhotonNetwork.Instantiate(trashItems[Random.Range(0, trashItems.Count)].name, randomPosition, Quaternion.identity);
             }
         }
     }
