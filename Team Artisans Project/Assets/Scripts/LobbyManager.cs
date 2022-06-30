@@ -129,10 +129,10 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     }
 
     
-    public void OnPlayerEnteredRoom(PlayerItem newPlayer)
+    public override void OnPlayerEnteredRoom(Player newPlayer)
     {
-        print("new player");
         UpdatePlayerList();
+
     }
     public override void OnPlayerLeftRoom(Player otherPlayer)
     {

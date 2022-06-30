@@ -355,6 +355,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 744266224}
+    - target: {fileID: 3039351140695506304, guid: da19859fcacd5f042ba10721bc37f60e, type: 3}
+      propertyPath: m_CellSize.x
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 3039351140695506304, guid: da19859fcacd5f042ba10721bc37f60e, type: 3}
+      propertyPath: m_CellSize.y
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 4559373287402159781, guid: da19859fcacd5f042ba10721bc37f60e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -442,6 +450,38 @@ PrefabInstance:
     - target: {fileID: 4559373287402159802, guid: da19859fcacd5f042ba10721bc37f60e, type: 3}
       propertyPath: m_Name
       value: RoomPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559373288721746686, guid: da19859fcacd5f042ba10721bc37f60e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 797.4932
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559373288721746686, guid: da19859fcacd5f042ba10721bc37f60e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 375.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559373288721746686, guid: da19859fcacd5f042ba10721bc37f60e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 459.2634
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559373288721746686, guid: da19859fcacd5f042ba10721bc37f60e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 136.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559373288776972423, guid: da19859fcacd5f042ba10721bc37f60e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 806.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559373288776972423, guid: da19859fcacd5f042ba10721bc37f60e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 383.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559373288776972423, guid: da19859fcacd5f042ba10721bc37f60e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 404.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559373288776972423, guid: da19859fcacd5f042ba10721bc37f60e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 182.94
       objectReference: {fileID: 0}
     - target: {fileID: 5408303741901524027, guid: da19859fcacd5f042ba10721bc37f60e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
