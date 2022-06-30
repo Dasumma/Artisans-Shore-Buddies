@@ -248,6 +248,7 @@ MonoBehaviour:
   - {fileID: 7529650441190779986, guid: 0e6272b1450cd70489bc72341e3d4204, type: 3}
   - {fileID: 8148286346348704624, guid: 260a8bdaf3299114e843ff4aa7de5614, type: 3}
   - {fileID: 1971655517064220024, guid: 49a7ca41e6b10bd48b3282d7eac7f16d, type: 3}
+  - {fileID: 2592504422995581348, guid: 996c3ac6f40f670468cecab13c60b371, type: 3}
   Obstacles:
   - {fileID: 7861609176611411678, guid: f41effc0cec0f2e4fb4a57cf9621334b, type: 3}
   - {fileID: 8234503399813616781, guid: e260e8d35ade43a4cb108f87f9495107, type: 3}
