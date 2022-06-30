@@ -9,6 +9,11 @@ public class PlayerSpawner : MonoBehaviour
     public GameObject[] playerPrefabs;
     public Transform[] spawnPoints;
 
+    public float minX, maxX, minY, maxY;
+    public float borderMinX, borderMaxX, borderMinY, borderMaxY;
+    public int trashQuantity;
+    public List<GameObject> trashItems;
+
     private void Start()
     {
         int randomNumber = Random.Range(0,spawnPoints.Length);
@@ -16,5 +21,15 @@ public class PlayerSpawner : MonoBehaviour
 		print(PhotonNetwork.LocalPlayer.CustomProperties["playerAvatar"]);
         GameObject playerToSpawn = playerPrefabs[(int)PhotonNetwork.LocalPlayer.CustomProperties["playerAvatar"]];
         PhotonNetwork.Instantiate(playerToSpawn.name,spawnPoint.position,Quaternion.identity);
+
+        if (PhotonNetwork.IsMasterClient)
+        {
+            for (int i = 0; i < trashQuantity; i++)
+            {
+                Vector2 randomPosition = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+                randomPosition = new Vector2(Random.Range(borderMinX, borderMaxX), Random.Range(borderMinY, borderMaxY));
+                PhotonNetwork.Instantiate(trashItems[Random.Range(0, 5)].name, randomPosition, Quaternion.identity);
+            }
+        }
     }
 }
